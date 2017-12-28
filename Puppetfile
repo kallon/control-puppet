@@ -177,8 +177,9 @@ mod 'puppetlabs/apache',
   :tag => '1.11.0'
 
 # Manage puppet agents and puppet master.  With integration related to Foreman
-mod 'theforeman-puppet', :latest
-#mod 'theforeman-puppet', '7.1.1'
+#mod 'theforeman-puppet', :latest
+# NOTE: I reverted this back to a pinned version, as the newest version had a bunch of dependencies which stuffed me around heaps, and it wasn't necessary for the 'latest' version  of puppet_agent
+mod 'theforeman-puppet', '7.1.1'
 
 # Module to manage Foreman application.  
 mod 'theforeman-foreman', '7.2.0'
