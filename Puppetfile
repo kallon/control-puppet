@@ -154,7 +154,7 @@ mod 'puppet-make', '1.1.0'
 mod 'puppetlabs-vcsrepo', '1.5.0'
 
 # Install and Configure R10k - to orchestrate puppet environments
-mod 'puppet-r10k', '6.0.0'
+mod 'puppet-r10k', '6.3.1'
 
 # Dependency for puppetlabs/puppetdb, postgresql, foreman
 mod 'puppetlabs/apt',
