@@ -293,7 +293,7 @@ mod 'jdowning/awscli', '2.0.0'
 # Ref: https://ask.puppetlabs.com/question/15236/can-you-use-r10k-to-deploy-from-a-private-repo/
 ###########
 
-mod 'profiles_common',b
+mod 'profiles_common',
 #  :git => 'ssh://git@bitbucket.org/kallon/profiles_common.git',
   :git => 'git@github.com:kallon/profiles-common.git',
   :branch => 'master'
