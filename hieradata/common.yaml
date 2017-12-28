@@ -1,0 +1,35 @@
+---
+message: "This node is using environment [%{environment}] data"
+#monitoring::params::monitoring_type: icinga
+#monitoring_type: icinga
+#pnp4nagios::params:monitoring_type: icinga
+
+apache::mod::passenger::passenger_max_pool_size: 12
+apache::mod::passenger::passenger_max_instances_per_app: 6
+apache::mod::passenger::passenger_max_request_queue_size: 250
+apache::mod::passenger::passenger_stat_throttle_rate: 120
+apache::mod::passenger::passenger_max_requests: 10000
+
+accounts::users:
+  andrew:
+#    hushlogin: true
+    comment: "Andrew Lastname"
+#    ensure: absent
+  kurni:
+    ensure: absent
+  will:
+    ensure: absent
+  ubuntu:
+    ensure: present
+accounts::groups:
+  dubber:
+    ensure: present
+  sudo:
+    ensure: present
+  adm:
+    ensure: present
+    members: ['syslog']
+accounts::user_defaults:
+  # purge_ssh_keys will delete all authorized keys that are not in Puppet
+  purge_ssh_keys: true
+
