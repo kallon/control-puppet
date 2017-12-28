@@ -154,7 +154,12 @@ mod 'puppet-make', '1.1.0'
 mod 'puppetlabs-vcsrepo', '1.5.0'
 
 # Install and Configure R10k - to orchestrate puppet environments
-mod 'puppet-r10k', '6.3.1'
+#mod 'puppet-r10k', '6.3.1'
+# NOTE: Needed a fix for pinning webrick version to an earlier version, because the later version was dependant on a newer version of Ruby that I don't have.
+#       When included in the next release, change back to a tag
+mod 'puppet-r10k',
+  :git => 'https://github.com/voxpupuli/puppet-r10k.git',
+  :commit => '82e4cacdccc10864303918821afa32032dee99e1'
 
 # Dependency for puppetlabs/puppetdb, postgresql, foreman
 mod 'puppetlabs/apt',
